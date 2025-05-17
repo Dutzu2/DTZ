@@ -14,7 +14,7 @@ $identifier = $_POST['username'] ?? '';  // aici pui username sau email
 $password = $_POST['password'] ?? '';
 
 if (!$identifier || !$password) {
-    header("Location: login.html?error=empty_fields");
+    header("Location: index.html?error=empty_fields");
     exit();
 }
 
@@ -26,7 +26,7 @@ $stmt->store_result();
 
 if ($stmt->num_rows === 0) {
     // Nu există user cu username sau email dat
-    header("Location: login.html?error=user_not_found");
+    header("Location: index.html?error=user_not_found");
     exit();
 }
 
@@ -34,7 +34,7 @@ $stmt->bind_result($id, $username_db, $password_hash, $role);
 $stmt->fetch();
 
 if (!password_verify($password, $password_hash)) {
-    header("Location: login.html?error=wrong_password");
+    header("Location: index.html?error=wrong_password");
     exit();
 }
 
