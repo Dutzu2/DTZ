@@ -45,7 +45,7 @@ $insert->bind_param("sss", $username, $email, $password_hash);
 
 if ($insert->execute()) {
     // Redirecționare cu mesaj de succes
-    header("Location: login.html?success=1");
+    header("Location: index.html?success=1");
     exit();
 } else {
     echo "Eroare la înregistrare.";
