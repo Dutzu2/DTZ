@@ -1,0 +1,364 @@
+/* === FONT & RESET === */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #0b0f19;
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+header {
+  background: #111827;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #00ff99;
+  box-shadow: 0 4px 10px #00ff9955;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #00ffc3;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: #d1d5db;
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: #00ffc3;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffc3;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* === MAIN === */
+main {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffcc;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: #1c1f2b;
+  padding: 15px 20px;
+  border-left: 5px solid #00ff99;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+ul li:hover {
+  background: #293042;
+}
+
+ul li a {
+  color: #ff5c5c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  color: #ff8787;
+}
+
+/* === FORM === */
+form {
+  background: #1a1c26;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ff9955;
+  margin-bottom: 30px;
+}
+
+form input,
+form select,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+}
+
+form input,
+form select {
+  background: #111827;
+  color: #cbd5e1;
+}
+
+form button {
+  background: #00ff99;
+  color: #0b0f19;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #00cc7a;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111827;
+  color: #6b7280;
+  border-top: 2px solid #00ff99;
+  margin-top: 40px;
+}
+
+/* === SCROLLBAR PERSONALIZAT === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff99aa;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+.profile-card {
+  background-color: #1e1e2f;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00ff99;
+  margin-bottom: 10px;
+}
+
+.profile-card .display-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff99;
+  margin-bottom: 5px;
+}
+
+.profile-card .bio {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+  white-space: pre-line;
+  padding: 10px;
+  background: #2a2a3d;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+form {
+  background-color: #1e1e2f;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #00ff99;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2a2a3d;
+  color: #ccc;
+  font-size: 14px;
+  resize: vertical;
+}
+
+form input[type="file"] {
+  margin-top: 10px;
+  color: #00ff99;
+}
+
+form button {
+  margin-top: 20px;
+  background-color: #00ff99;
+  color: #1e1e2f;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #00cc77;
+}
+
+.team-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.team-list li {
+  background: #222233;
+  margin: 8px 0;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.team-list li a {
+  display: block;
+  padding: 15px 20px;
+  color: #00ff99;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.team-list li:hover {
+  background: #00ff99;
+}
+
+.team-list li:hover a {
+  color: #1e1e2f;
+}
+
+.team-details {
+  background: #1e1e2f;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 20px auto;
+  color: #eee;
+  box-shadow: 0 0 20px rgba(0, 255, 128, 0.4);
+}
+
+.team-details h2 {
+  color: #00ff99;
+  margin-bottom: 10px;
+}
+
+.team-details p {
+  line-height: 1.5;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.member-list {
+  list-style: none;
+  padding: 0;
+}
+
+.member-list li {
+  padding: 8px 10px;
+  border-bottom: 1px solid #00ff9977;
+  color: #eee;
+  font-weight: 600;
+}
+
+.member-list li a {
+  color: #00ff99;
+  text-decoration: underline;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.member-list li:last-child {
+  border-bottom: none;
+}
+
+/* Stil general pentru toate inputurile din formular */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0 15px 0;
+  display: inline-block;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+/* Când input-ul e focusat */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff; /* albastru, dar poți schimba după gust */
+  outline: none;
+}
+
+/* Placeholder text */
+input::placeholder {
+  color: #888;
+  font-style: italic;
+}

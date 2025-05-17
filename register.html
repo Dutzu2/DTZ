@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creare Cont - CyberGames</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Înregistrare</h2>
+    <form id="registerForm" method="POST" action="register.php">
+  <input type="text" name="username" placeholder="Utilizator" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <input type="password" name="password" placeholder="Parolă" required />
+  <input type="password" name="confirm_password" placeholder="Confirmă parola" required />
+  <button type="submit">Creează cont</button>
+  <p id="error-message" style="display: none;"></p>
+</form>
+
+    <p class="switch-form">
+  Ai deja cont? Autentifică-te pe 
+  <a href="login.html">Login</a>
+</p>
+
+  </div>
+  <script src="register.js"></script>
+</body>
+</html>

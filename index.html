@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - CyberGames CS2</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div id="success-message" class="message-box"></div>
+      <p id="error-message" class="error-box"></p>
+      <h2>Autentificare</h2>
+      <p id="error-message" style="display: none"></p>
+      <form id="loginForm" method="POST" action="login.php">
+        <input type="text" name="username" placeholder="Utilizator / Email" required />
+        <input type="password" name="password" placeholder="Parolă" required />
+        <button type="submit">Autentifică-te</button>
+      </form>
+      <p class="switch-form">
+        Nu ai cont? Creează unul rapid pe
+        <a href="register.html">Înregistrare</a>
+      </p>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
